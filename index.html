@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gnapika Achari - Personal Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Glitch+Pop&display=swap');
+:root{
+    --bg-black-900:#f2f2fc;
+    --bg-black-100:#fdf9ff;
+    --bg-black-50:#e8dfec;
+    --text-black-900:#302e4d;
+    --text-black-700:#504e70;   
+}
+:root{
+    --skin-color:#ec1839;
+    
+}
+:root{
+    --skin-color:#fa5b0f;
+    
+}
+:root{
+    --skin-color:#37b182;
+    
+}
+:root{
+    --skin-color:#1854b4;
+    
+}
+:root{
+    --skin-color:#f021b2;
+    
+}
+body.dark{
+
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;  
+}
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Raleway',sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+::before,::after{
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+.section{
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block; 
+    padding: 0 30px;
+    opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+
+}
+.section.back-section
+{
+    z-index: 1;
+}
+.section.active
+{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+@keyframes slideSection {
+    0%
+    {
+        transform: translateX(100%);
+    }
+    100%
+    {
+        transform: translateX(0%);
+    }
+    
+}
+.hidden
+{
+    display: none !important;
+}
+
+.padd-15
+{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container
+{
+    max-width: 1100px;
+    width: 100%;
+    
+    margin: auto;
+}
+.section .container
+{
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+.section-title
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 60px;
+}
+.section-title h2{
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position:relative ;
+}
+.section-title h2::before
+{
+    content: ' ';
+    height: 4px;
+    width: 50px;
+    background-color:var(--skin-color) ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after
+{
+    content: ' ';
+    height: 4px;
+    width: 25px;
+    background-color:var(--skin-color) ;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+.row
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    position: relative;
+}
+.btn
+{
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 35px;
+    color: white;
+    border-radius: 40px;
+    display: inline-block;
+    white-space: nowrap; 
+    border: none;
+    background: var(--skin-color);
+    transition: all 0.3s ease;
+}
+.btn:hover
+{
+    transform: scale(1.05);
+}
+.shadow-dark
+{
+    box-shadow: 0 0 20px rgba(48, 46,77,0.15);
+}
+.aside{
+    width: 270px;
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 30px;
+    height: 100%;
+    border-radius: 1px solid var(--bg-black-50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;  
+    transition:all 0.3s ease ;
+}
+.aside .logo{
+    position: absolute;
+    top: 50px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.aside  .logo a{
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+}
+.aside .logo a span{
+    font-family: 'Clicker Script' , cursive;
+    font-size: 60px;
+}
+.aside .logo a::before
+{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+.aside .logo a::after
+{
+    content: ' ';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+.aside .nav-toggler
+{
+    height: 40px;
+    width: 45px;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 20px;
+    border-radius: 5px;
+    background:var(--bg-black-100) ;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+}
+.aside .nav-toggler span{
+    height: 2px;
+    width: 18px;background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler.open span
+{
+    background-color: transparent;
+}
+.aside .nav-toggler span::before
+{
+    content: ' ';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+.aside .nav-toggler.open span::before
+{
+    transform: rotate(45deg);
+    top: 0;
+}
+.aside .nav-toggler span::after
+{
+    content: ' ';
+    height: 2px;
+    width: 18px;
+    background: var(--skin-color);
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+.aside .nav-toggler.open span::after
+{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.aside .nav
+{
+    margin-top: 50px;
+}
+.aside .nav li{
+    margin-bottom: 20px;
+    display: block;
+}
+.aside .nav li a
+{
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    border-bottom: 5px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: 5px 15px;
+}
+.aside .nav li a.active
+{
+    color: var(--skin-color);
+}
+.aside .nav li a i{
+    margin-right: 15px;
+}
+.home .home-img img
+{
+    height: 400px;
+}
+.home .home-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+h3.hello
+{
+    font-size:28px ;
+    margin: 15px 0;
+}
+h3.hello span{
+    font-family: 'Clicker Script', cursive;
+    font-size:30px ;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+h3.my-profession
+{
+    font-size: 30px;
+    margin: 15px 0;
+}
+.typing
+{
+    color: var(--skin-color);
+}
+.home-info p
+{
+    margin-bottom: 70px;
+    font-size: 20px;
+    color: var(--text-black-700);
+}
+.home .home-img
+{
+    flex: 0 0 40%;
+    max-width: 40%; 
+    text-align: center;
+    position: relative;
+}
+.home-img::after
+{
+    content: '';
+    position: absolute;
+    height: 800x;
+    width: 80px;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    right: 20px;
+    bottom: -40px;
+}
+.home-img::before
+{
+    content: '';
+    position: absolute;
+    height: 800x;
+    width: 80px;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    left: -20px;
+    top: -40px;
+}
+.home .home-img img
+{
+    height: 400px;
+    border-radius: 5px;
+    margin: auto;
+}
+.home
+{
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+/*About page*/
+.about .about-content
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .about-text
+{
+    flex:0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .about-text h3
+{
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+.about .about-content .about-text h3 span{
+    color: var(--skin-color);
+}
+.about .about-content .about-text p
+{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+}
+.about .about-content .personal-info
+{
+    flex: 0 0 60%;
+    max-width: 60%;
+    margin-top: 40px;
+}
+.about .about-content .personal-info .info-item
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.about .about-content .personal-info .info-item p{
+    font-weight: 600;
+    padding: 10px;
+    font-size: 16px;
+    color: var(--text-black-900);
+    border-bottom: 1px solid var(--bg-black-50);
+}
+.about .about-content .personal-info .info-item p span
+{
+    font-weight: 400;
+    color: var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .personal-info .buttons{
+    margin-top: 30px;
+}
+.about .about-content .personal-info .buttons .btn
+{
+    
+    margin-top: 10px;
+}
+.about .about-content .skills
+{
+    flex: 0 0 40%;
+    max-width: 40%;
+    margin-top: 40px;
+}
+.about .about-content .skills .skill-item
+{
+    flex: 0 0 100% ;
+    max-width: 100%;
+}
+.about .about-content .skills .skill-item h5
+{
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.about .about-content .skills .skill-item .progress
+{
+    background-color: var(--bg-black-50);
+    height: 7px;
+    border-radius: 4px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .skills .skill-item
+{
+    margin-bottom: 25px;
+}
+.about .about-content .skills .skill-item .progress .progress-in
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 4px;
+    background-color: var(--skin-color);
+}
+.about .about-content .skills .skill-item .skill-percent
+{
+    position: absolute;
+    right: 0;
+    color: var(--text-black-900);
+    top: -40px;
+    font-weight: 400;
+    line-height: 40px;
+}
+.about .about-content .education,
+.about .about-content .experience
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.about .about-content h3.section-title
+{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-700);
+}
+.about .about-content .timeline-box
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .timeline
+{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--border-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+}
+.about .about-content .timeline .timeline-item
+{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.about .about-content .timeline .timeline-item:last-child
+{
+    padding-bottom: 0;
+}
+
+.about .about-content .timeline .timeline-item::before
+{
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color:var(--skin-color);
+}
+.about .about-content .timeline .circle-dot
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color:var(--skin-color) ;
+}
+.about .about-content .timeline .timeline-date
+{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-black-700);
+}
+.about .about-content .timeline .timeline-date .fa
+{
+    margin-right: 5px;
+}
+.about .about-content .timeline .timeline-title
+{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-text
+{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--text-black-700);
+}
+/* services */
+.service .container
+{
+    padding-bottom: 40px;
+}
+.service .service-item
+{
+    margin-bottom: 30px;
+    flex:0 0 33.33%;
+    max-width: 33.33%;
+}
+.service .service-item .service-item-inner
+{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    padding: 30px 15px;
+    text-align: center;
+    transition: all 0.35 ease;
+}
+.service .service-item .service-item-inner:hover
+{
+    box-shadow: 0 0 20px rgba(48,46,77,0.15);
+}
+.service .service-item .service-item-inner .icon
+{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    text-align: center;
+    transition: all 0.35 ease;
+}
+.service .service-item .service-item-inner .icon .fa
+{
+    font-size: 40px;
+    line-height: 60px;
+    color: var(--skin-color);
+    transition: all 0.35 ease;
+}
+.service .service-item .service-item-inner:hover .icon
+{
+    background: var(--skin-color);
+}
+.service .service-item .service-item-inner:hover .icon .fa
+{
+    font-size: 25px;
+    color:#ffffff;
+}
+.service .service-item .service-item-inner h4
+{
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+}
+.service .service-item .service-item-inner p
+{
+    font-size: 16px;
+    color: var(--text-black-700);
+    line-height: 25px;
+}
+/*portfolio*/
+.portfolio .container
+{
+    padding-bottom: 40px;
+}
+.portfolio .portfolio-heading
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.portfolio .portfolio-heading h2
+{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+.portfolio .portfolio-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-item-inner
+{
+    border: 6px solid var(--bg-black-100);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio .portfolio-item-inner .portfolio-img img{
+    width: 100%;
+    display: block;
+}
+
+/* contact */
+.contact-title
+{
+    color:var(--skin-color);
+    text-align: center;
+    font-size: 25px;
+   margin-bottom: 20px; 
+}
+.contact-sub-title
+{
+    color:var(--skin-color);
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 60px;
+}
+.contact .contact-info-item
+{
+    flex:0 0 25%;
+    max-width: 25%;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.contact .contact-info-item .icon
+{
+    display: inline-block;
+}
+.contact .contact-info-item .icon .fa
+{
+    font-size: 25px;
+    color: var(--skin-color);
+}
+.contact .contact-info-item h4
+{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-black-700);
+    text-transform: capitalize;
+    margin: 15px 0 15px;
+}
+.contact .contact-info-item p
+{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
+.contact .contact-form
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .col-6
+{
+    flex: 0 0 50%;
+    max-width: 50%; 
+}
+.contact .contact-form .col-12
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.contact .contact-form .form-item
+{
+    margin-bottom: 30px;
+}
+.contact .contact-form .form-item .form-control
+{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: var(--bg-black-100);
+    border:1px solid var(--bg-black-50);
+    padding: 10px 25px;
+    font-size: 16px;
+    color: var(--text-black-700);
+    transition: all 0.3s ease;
+}
+.contact .contact-form .form-item .form-control:focus
+{
+    box-shadow: 0 0 20px rgba(48, 46,77,0.15);
+}
+.contact .contact-form .form-item textarea.form-control
+{
+    height: 140px;
+}
+.contact .contact-form .btn{
+    height: 50px;
+    padding: 0 50px;
+}
+@media (max-width:1199px)
+{   
+    .section .container
+    {
+        padding-top: 70px;
+    }
+    .aside
+    {
+        left: -270px;
+    }
+    .aside.open
+    {
+        left: 0;
+    }
+    .aside.open
+    {
+        left: 0;
+    }
+    .aside .nav-toggler
+    {
+        display: flex;
+        left: 30px;
+    }
+    .aside .nav-toggler.open
+    {
+        left: 300px;
+    }
+    .section
+    {
+        left: 0;
+    }
+    .section.open
+    {
+        left: 270px;
+    }
+
+    .about .about-content .personal-info .info-item p span
+    {
+        display: block;
+        margin-left: 0;
+    }
+}
+@media (max-width:991px)
+{
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item
+    {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .home .home-img
+    {
+        display: none;
+    }
+}
+@media (max-width:767px)
+{
+    .contact .contact-form .col-6,
+    .contact .contact-info-item,
+    .portfolio .portfolio-item,
+    .service .service-item,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .about .about-content .skills,
+    .about .about-content .personal-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+.style-switcher
+{
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 15px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition:all 0.3s ease ;
+    transform: translateX(100%);
+}
+.style-switcher.open {
+    transform: translateX(-35px);
+}
+
+.style-switcher .s-icon
+{
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    background: var(--bg-black-100);
+    right: 100%;
+    border: 1px solid var(--bg-black-50);
+    margin-right: 100px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.style-switcher .s-icon i
+{
+    line-height: 40px;
+}
+.style-switcher .style-switcher.toggler
+{
+    top: 0;
+}
+
+.style-switcher h4
+{
+    margin:0 0 10px;
+    color:var(--text-black-700);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.style-switcher .colors
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.style-switcher .colors span
+{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+.style-switcher .color-1
+{
+    background: #ec1839;
+}
+.style-switcher .color-2
+{
+    background: #fa5b0f;
+}
+.style-switcher .color-3
+{
+    background: #37b182;
+}
+.style-switcher .color-4
+{
+    background: #1854b4;
+}
+.style-switcher .color-5
+{
+    background: #f021b2;
+}
+
+  </style>
+  
+</head>
+<body class="dark">
+
+  <!-- Main Container Start -->
+  <div class="main-container">
+
+    <!-- Aside Start -->
+    <div class="aside">
+      <div class="logo">
+        <a href="#"><span>A</span>Gnapika</a>
+      </div>
+      <nav class="nav-toggler">
+        <span></span>
+      </nav>
+      <ul class="nav">
+        <li><a href="#home" class="active"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fa fa-user"></i> About</a></li>
+        <li><a href="#services"><i class="fa fa-list"></i> Services</a></li>
+        <li><a href="#portfolio"><i class="fa fa-briefcase"></i> Portfolio</a></li>
+        <li><a href="#contact"><i class="fa fa-comments"></i> Contact</a></li>
+      </ul>
+    </div>
+    <!-- Aside End -->
+
+    <!-- Main Content Start -->
+    <div class="main-content">
+      <!-- Home Section Start -->
+      <section class="home active section" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="home-info padd-15">
+                        <h3 class="hello">Hello , my name is  <span>A Gnapika</span></h3>
+                        <h3 class="my-profession">I'am <span class="typing">Full stack Developer</span></h3>
+                        <p>" I'm a passionate Full Stack Developer with a B.Tech in Electronics and Communication Engineering. My journey is a blend of exploring advanced Java and diving deep into web development. Solving problems with code, whether it's through Java, Core Java, DSA, or web technologies, is my forte. Recently, I started a YouTube channel, Craftika, where I share my love for art and craft. Join me on this exciting journey as I blend creativity with technology! "</p>
+                        <a href="gnapika java full stack.pdf" download="gnapika_java_full_stack.pdf" class="btn">Download CV</a>
+                    </div>
+                    <div class="home-img padd-15">
+                      <img src="mYself.png">
+                    </div>
+                </div>
+            </div>
+    </section>
+      <!-- Home Section End -->
+
+      <!-- About Section Start -->
+        <section class="about section " id="about">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>About Me</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="about-content padd-15">
+                <div class="row">
+                  <div class="about-text padd-15">
+                    <h3>I'm Gnapika  <span>Full stack Developer</span></h3>
+                    <p>I am a recent graduate with a Bachelor of Technology in Electronics and Communication Engineering from RGUKT Rk Valley-Idupulapaya, where I achieved a CGPA of 8.12. My passion lies in software development, with a strong focus on <b>Java</b>,<b>Core Java</b>,<b>Data Structures and Algorithms (DSA)</b>,and <b>web technologies</b>. I enjoy solving complex problems and developing innovative solutions through coding.In addition to my technical expertise, I have recently embarked on a creative journey as an art and craft enthusiast on YouTube. My channel, Craftika, is where I share my love for crafting and DIY projects. This new venture allows me to blend my technical skills with my creativity, offering a unique perspective to my audience.Currently, I am enhancing my skills in advanced Java concepts and exploring new technologies to improve my proficiency in both Java and full-stack web development. I am eager to collaborate on exciting software development projects and work with dynamic teams to create impactful solutions.Let's connect and explore opportunities to innovate and create together!</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="personal-info padd-15">
+                    <div class="row">
+                      <div class="info-item padd-15">
+                        <p>Birthday : <span>09 April 2003</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Age : <span>22' Years</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>linkedin : <span><a href="https://www.linkedin.com/in/gnapika-achari/" target="_blank">gnapika-achari</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                         <p>github : <span><a href="https://github.com/gnapi77" target="_blank">gnapi77</a></span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Email : <span><a href="mailto:gnapikaachari47@gmail.com">gnapikaachari47@gmail.com</a></span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Degree : <span>ECE</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Phone : <span>(+91) 9391729395</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>City : <span>Chittoor</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Fresher : <span>Available To Hire</span></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                           <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skills padd-15">
+                    <div class="row">
+                      <div class="skill-item padd-15">
+                        <h5>HTML</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:80%"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:76%"></div>
+                          <div class="skill-percent">76%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JAVASCRIPT</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:86%"></div>
+                          <div class="skill-percent">86%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JAVA</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:96%"></div>
+                          <div class="skill-percent">96%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JDBC</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:66%"></div>
+                          <div class="skill-percent">66%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>SERVLET</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:76%"></div>
+                          <div class="skill-percent">76%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>MySQL</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width:76%"></div>
+                          <div class="skill-percent">86%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                          <!-- == timeline item == -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                              <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2020-2024
+                             </h3>
+                              <h4 class="timeline-title">B.Tech in Electronics and Communication</h4>
+                              <p class="timeline-text">Graduated with a CGPA of 8.12 from RGUKT RK Valley, specializing in Electronics and Communication Engineering (ECE). Developed a strong foundation in both theoretical and practical aspects of the field.</p>
+                            </div>
+                           <!-- == timeline item == -->
+                             <div class="timeline-item">
+                               <div class="circle-dot"></div> 
+                               <h3 class="timeline-date"> 
+                                <i class="fa fa-calendar"></i> 2011-2013 
+                              </h3> 
+                              <h4 class="timeline-title">Intermediate in MPC</h4> 
+                              <p class="timeline-text">Completed Intermediate studies at RGUKT RK Valley, achieving a CGPA of 8.04 in the MPC (Mathematics, Physics, Chemistry) stream. Built a solid foundation in these core subjects.</p> </div>
+                           <!-- == timeline item == -->
+                            <div class="timeline-item">
+                               <div class="circle-dot"></div>
+                                <h3 class="timeline-date">
+                                   <i class="fa fa-calendar"></i> 2017-2018 
+                                  </h3> 
+                                  <h4 class="timeline-title">Schooling at APMODEL School, Mulakalacheruvu</h4> 
+                                  <p class="timeline-text">Completed schooling with a CGPA of 10, emerging as the school topper. Developed a strong academic foundation and excelled in various subjects.</p>
+                                 </div>
+                            <!-- == timeline item == -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="experience padd-15">
+                    <h3 class="title">Experience</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline shadow-dark">
+                         <!-- == timeline item == -->
+                         <div class="timeline-item">
+                          <div class="circle-dot"></div>
+                          <h3 class="timeline-date">
+                            <i class="fa fa-calendar"></i> July 2023 - August 2023
+                          </h3>
+                          <h4 class="timeline-title">Web Developer Intern at Internpe</h4>
+                          <p class="timeline-text">Worked as a Web Developer Intern at Internpe, focusing on HTML, CSS, and JavaScript. Gained hands-on experience in building and maintaining web applications.</p>
+                        </div>
+                         <!-- == timeline item == -->
+                           <div class="timeline-item">
+                             <div class="circle-dot"></div>
+                              <h3 class="timeline-date">
+                                 <i class="fa fa-calendar"></i> June 2024 - November 2024 
+                                </h3> 
+                                <h4 class="timeline-title">Full Stack Developer Intern at Besant Technologies, Bangalore</h4> 
+                                <p class="timeline-text">Worked as a Full Stack Developer Intern at Besant Technologies, Bangalore. Gained extensive knowledge and hands-on experience in Java, Core Java, JDBC, Servlet, and SQL. Developed and maintained full-stack web applications.</p> 
+                              </div>
+                           <!-- == timeline item == -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      <!-- About Section End -->
+      <!-- Service Section Start -->
+       <section class="service section" id="services">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Services</h2>
+            </div>
+          </div>
+          <div class="row">
+            <!-- == services item start ==-->
+            <div class="service-item padd-15"> 
+              <div class="service-item-inner"> 
+                <div class="icon"> 
+                  <i class="fa fa-database"></i> </div> 
+                  <h4><a href="https://github.com/gnapi77/Banking-management-system-" target="_blank">Java Full Stack Development</a></h4> 
+                  <p>Skilled in Java, Core Java, JDBC, Servlet, and SQL. I build robust web applications. Ready to join as a fresher and contribute to dynamic teams.</p>
+                </div> 
+              </div>
+            <!-- == services item end ==-->
+            <!-- == services item start ==-->
+            <div class="service-item padd-15"> 
+              <div class="service-item-inner"> 
+                <div class="icon"> <i class="fa fa-code"></i> </div> 
+                <h4><a href="https://www.geeksforgeeks.org/user/acharigncy69/" target="_blank">Coding Tutoring</a></h4> 
+                <p>Experienced in solving challenges on LeetCode and GeeksforGeeks. I offer tutoring sessions to help others improve their coding skills and prepare for technical interviews.</p> 
+              </div> 
+            </div>
+            <!-- == services item end ==-->
+             
+             <!-- == services item start ==-->
+             <div class="service-item padd-15">
+            <div class="service-item-inner">
+               <div class="icon"> <i class="fa fa-laptop-code"></i> 
+              </div> 
+              <h4><a href="https://github.com/gnapi77/Weather-app" target="_blank">Web Development</a></h4> 
+              <p>Specializing in HTML, CSS, and JavaScript. I create dynamic, responsive websites. Ready to join as a fresher and contribute to dynamic teams.</p> 
+            </div> 
+          </div>
+            <!-- == services item end ==-->
+             <!-- == services item start ==-->
+             <div class="service-item padd-15"> 
+              <div class="service-item-inner"> 
+                <div class="icon"> 
+                  <i class="fa fa-edit"></i> </div> 
+                  <h4><a href="../files/editing.pdf" target="_blank" download>Poster and Video Editing</a></h4> <p>Experienced in editing posters and videos to enhance visual appeal. Ready to join as a fresher and contribute to creative projects.</p> </div>
+            <!-- == services item end ==-->
+          </div>
+        </div>
+       </section>
+      <!-- Service Section End -->
+      <!-- portfolie Section Start -->
+       <section class="portfolio section" id="portfolio">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Portfolio</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portfolio-heading padd-15">
+              <h2>My Last Projects : </h2>
+            </div> 
+          </div>
+          <div class="row">
+            <!-- ====== Portfolio item start======-->
+             <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="people-go-bank-app.PNG">
+                </div>
+              </div>
+             </div>
+            <!-- ====== Portfolio item End======-->
+             <!-- ====== Portfolio item start======-->
+             <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="weather-app.PNG">
+                </div>
+              </div>
+             </div>
+            <!-- ====== Portfolio item End======-->
+             <!-- ====== Portfolio item start======-->
+             <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="SQL-PROJECT-ER RELATION.PNG">
+                </div>
+              </div>
+             </div>
+            <!-- ====== Portfolio item End======-->
+             <!-- ====== Portfolio item start======-->
+             <div class="portfolio-item padd-15">
+              <div class="portfolio-item-inner shadow-dark">
+                <div class="portfolio-img">
+                  <img src="youtube-project.png">
+                </div>
+              </div>
+             </div>
+            <!-- ====== Portfolio item End======-->
+
+          </div>
+        </div>
+       </section>
+
+      <!-- portfolie Section End -->
+      <!-- Contact Section Start -->
+       <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+              <div class="section-title padd-15">
+                <h2>Contact Me</h2>
+              </div>
+          </div>
+          <h3 class="contact-title padd-15">Have you any Query ?</h3>
+          <h4 class="contact-sub-title padd-15">I'm at your service</h4>
+          <div class="row">
+            <!-- ======contact-item-start ========-->
+             <div class="contact-info-item padd-15">
+              <div class="icon"><i class="fa fa-phone"></i></div>
+              <h4> Call us on</h4>
+              <p>+91 9391729395</p>
+             </div>
+            <!-- ======contact-item-End ========-->
+              <!-- ======contact-item-start ========-->
+              <div class="contact-info-item padd-15">
+                 <div class="icon">
+                  <i class="fa fa-map-marker-alt"></i></div>
+                   <h4><a href="https://www.google.com/maps?q=Bangalore" target="_blank">Location</a></h4>
+                    <p>Bangalore</p>
+               </div>
+              <!-- ======contact-item-End ========-->
+                <!-- ======contact-item-start ========-->
+                <div class="contact-info-item padd-15"> 
+                  <div class="icon"><i class="fa fa-envelope"></i></div>
+                   <h4><a href="mailto:gnapikaachari47@gmail.com">Email</a></h4>
+                    <p>gnapikaachari47@gmail.com</p>
+                </div>
+            <!-- ======contact-item-End ========-->
+              <!-- ======contact-item-start ========-->
+              <div class="contact-info-item padd-15">
+                 <div class="icon"><i class="fa fa-globe-europe"></i></div> 
+                 <h4><a href="https://www.linkedin.com/in/gnapika-achari/" target="_blank">LinkedIn</a></h4> 
+                 <p>www.linkedin.com/in/gnapika-achari/</p>
+               </div>
+              <!-- ======contact-item-End ========-->
+          </div>
+          <h3 class="contact-title padd-15">Send me an email</h3>
+          <h4 class="contact-sub-title padd-15">I'm very responsive to messages</h4>
+          <!--==== contact form ====-->
+          <div class="row">
+            <div class="contact-form padd-15">
+              <div class="row">
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Name">
+                  </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <div class="form-group">
+                    <textarea name=""class="form-control" id="" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+
+      <!-- Contact Section End-->
+    </div>
+    <!-- Main Content End -->
+
+    <!--=====Style switcher start ======-->
+    <div class="style-switcher">
+      <div class="style-switcher toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas "></i>
+      </div>
+      <h4>Theme colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      
+      </div>
+    </div>
+    <!--=====Style switcher END ======-->
+
+
+  </div>
+  <!-- Main Container End -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" referrerpolicy="no-referrer"></script>
+  <script>
+    /* ==== typing animation === */
+var typed = new Typed('.typing', {
+    strings: [" ", "Full stack developer", "Web developer", "Youtuber"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});
+
+/* ==== aside === */
+const nav = document.querySelector(".nav"),
+    navList = nav.querySelectorAll("li"),
+    totalNavList = navList.length,
+    allSection = document.querySelectorAll(".section"),
+    totalSection = allSection.length;
+
+for (let i = 0; i < totalNavList; i++) {
+    const a = navList[i].querySelector("a");
+    a.addEventListener("click", function () {
+      removeBackSection();
+
+        for (let j = 0; j < totalNavList; j++) {
+            if (navList[j].querySelector("a").classList.contains("active"))
+            {
+                addBackSection(j);
+                // allSection[j].classList.add("back-section");
+            }
+            navList[j].querySelector("a").classList.remove("active");
+        }
+        this.classList.add("active");
+        showSection(this);
+        if (window.innerWidth < 1200) {
+            asideSectionTogglerBtn();
+        }
+    });
+}
+function removeBackSection()
+{
+    for(let i=0; i<totalSection; i++)
+    {
+        allSection[i].classList.remove("back-section");
+    }
+}
+function addBackSection(num)
+{
+    allSection[num].classList.add("back-section");
+
+}
+
+function showSection(element) {
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.remove("active");
+    }
+    const target = element.getAttribute("href").split("#")[1];
+    document.querySelector("#" + target).classList.add("active");
+}
+
+function updateNav(element) {
+    for (let i = 0; i < totalNavList; i++) {
+        navList[i].querySelector("a").classList.remove("active");
+        const target = element.getAttribute("href").split("#")[1];
+        if(target==navList[i].querySelector("a").getAttribute("href".split("#")[1]))
+            {
+                navList[i].querySelector("a").classList.add("active");
+        
+            }
+    }    
+}
+document.querySelector(".hire-me").addEventListener("click", function() {
+    const sectionIndex = this.getAttribute("data-section-index");
+    // console.log(sectionIndex);
+    showSection(this);
+    updateNav(this);
+    removeBackSection();
+    addBackSection(sectionIndex) ;
+});
+
+
+const navTogglerBtn = document.querySelector(".nav-toggler"),
+    aside = document.querySelector(".aside");
+
+navTogglerBtn.addEventListener("click", () => {
+    asideSectionTogglerBtn();
+});
+
+function asideSectionTogglerBtn() {
+    aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    for (let i = 0; i < totalSection; i++) {
+        allSection[i].classList.toggle("open");
+    }
+}
+/* ========= toggle style switcher =====*/
+const styleSwitcherToggle = document.querySelector(".style-switcher.toggler");
+styleSwitcherToggle.addEventListener("click", () => {
+    document.querySelector(".style-switcher").classList.toggle("open");
+});
+
+/* Hide style switcher on scroll */
+window.addEventListener("scroll", () => {
+    if (document.querySelector(".style-switcher").classList.contains("open")) {
+        document.querySelector(".style-switcher").classList.remove("open");
+    }
+});
+/*  ==========theme color ======== */
+const alternatestyles = document.querySelectorAll('.alternate-style');
+
+function setActiveStyle(color) {
+    alternatestyles.forEach((style) => {
+        if (color === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        } else {
+            style.setAttribute("disabled", "true");
+        }
+    });
+}
+/* ------- ======= theme light and dark========---------*/
+const dayNight = document.querySelector(".day-night");
+dayNight.addEventListener("click", () => {
+
+    dayNight.querySelector("i").classList.toggle("fa-sun");
+    dayNight.querySelector("i").classList.toggle("fa-moon");
+    document.body.classList.toggle("dark");
+    
+})
+window.addEventListener("load",() =>{
+    if(document.body.classList.contains("dark"))
+    {
+        dayNight.querySelector("i").classList.add("fa-sun");
+    }
+    else{
+        dayNight.querySelector("i").classList.add("fa-moon");
+    }
+})
+  </script>
+</body>
+</html>
